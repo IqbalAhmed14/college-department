@@ -1,0 +1,35 @@
+/* home.css */
+
+.home-hero {
+  padding-top: 100px;
+}
+
+.home-about {
+  background-color: #ffffff;
+}
+
+.home-about p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

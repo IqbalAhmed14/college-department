@@ -1,0 +1,35 @@
+/* header.css */
+
+.header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(13, 71, 161, 0.85),
+      rgba(13, 71, 161, 0.85)
+    ),
+    url("../../public/images/department/hero.jpg") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: var(--section-padding);
+}
+
+.header-content {
+  max-width: 900px;
+}
+
+.header h1 {
+  margin-bottom: var(--space-md);
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-lg);
+  color: #e3f2fd;
+}
+
+.header .btn-primary {
+  margin-top: var(--space-md);
+}

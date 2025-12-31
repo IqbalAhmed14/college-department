@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Department of Information Technology</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="page-resources">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="nav-logo">Dept. of IT</div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <header class="header" style="min-height: 55vh;">
+    <div class="header-content fade-in">
+      <h1>Academic Resources</h1>
+      <p>
+        Access syllabus, study materials, and official announcements of the
+        Department of Information Technology, Saveetha University.
+      </p>
+    </div>
+  </header>
+
+  <!-- ================= INTRO ================= -->
+  <section class="section">
+    <div class="container text-center">
+      <h2>Learning & Academic Support</h2>
+      <p style="max-width: 900px; margin: 0 auto;">
+        This section provides students with essential academic resources
+        including curriculum syllabus, study materials, lecture notes, and
+        official departmental notices to support effective learning.
+      </p>
+
+      <!-- Quick Visual Navigation -->
+      <div class="stats" style="margin-top: 28px;">
+        <div class="card stat-box"><p>Syllabus</p></div>
+        <div class="card stat-box"><p>Study Materials</p></div>
+        <div class="card stat-box"><p>Notices</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SYLLABUS ================= -->
+  <section class="section light-bg">
+    <div class="container">
+      <h2>Syllabus</h2>
+      <p>
+        Updated curriculum and syllabus documents prescribed by Saveetha
+        University for the Information Technology program.
+      </p>
+
+      <p style="font-size: 14px; opacity: 0.7;">
+        Maintained by the Department of Information Technology
+      </p>
+
+      <!-- JS injects syllabus here -->
+      <div class="resource-list" id="syllabusList"></div>
+    </div>
+  </section>
+
+  <!-- ================= STUDY MATERIALS ================= -->
+  <section class="section">
+    <div class="container">
+      <h2>Study Materials</h2>
+      <p>
+        Lecture notes, reference materials, and learning resources prepared
+        by faculty members to support academic excellence.
+      </p>
+
+      <p style="font-size: 14px; opacity: 0.7;">
+        Curated by faculty members
+      </p>
+
+      <!-- JS injects materials here -->
+      <div class="resource-list" id="materialsList"></div>
+    </div>
+  </section>
+
+  <!-- ================= NOTICES ================= -->
+  <section class="section light-bg">
+    <div class="container">
+      <h2>Notices & Announcements</h2>
+      <p>
+        Official announcements, academic schedules, workshop notifications,
+        and examination-related updates.
+      </p>
+
+      <p style="font-size: 14px; opacity: 0.7;">
+        Official communication from the department
+      </p>
+
+      <!-- JS injects notices here -->
+      <div class="resource-list" id="noticesList"></div>
+    </div>
+  </section>
+
+  <!-- ================= WHY THIS SECTION ================= -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Why These Resources Matter</h2>
+
+      <div class="stats" style="margin-top: 32px;">
+        <div class="card stat-box">
+          <p>✔ Centralized access to academic materials</p>
+        </div>
+        <div class="card stat-box">
+          <p>✔ Updated syllabus aligned with industry needs</p>
+        </div>
+        <div class="card stat-box">
+          <p>✔ Faculty-curated learning resources</p>
+        </div>
+        <div class="card stat-box">
+          <p>✔ Timely communication of academic notices</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4>Department of Information Technology</h4>
+        <p>
+          Saveetha University – Supporting academic excellence through
+          quality learning resources.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="../index.html">Home</a><br />
+        <a href="about.html">About</a><br />
+        <a href="faculty.html">Faculty</a><br />
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Email: itdepartment@saveetha.edu.in</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Saveetha University – Department of Information Technology
+    </div>
+  </footer>
+
+  <!-- ================= RESOURCE DATA SCRIPT (ADDED ONLY) ================= -->
+  <script>
+    fetch("http://localhost:5000/api/resources")
+      .then(res => res.json())
+      .then(resources => {
+        resources.forEach(r => {
+          const item = `
+            <div class="card">
+              <p><strong>${r.title}</strong></p>
+              <a href="http://localhost:5000${r.file_url}" target="_blank">
+                View / Download
+              </a>
+            </div>
+          `;
+
+          if (r.resource_type === "Syllabus") {
+            document.getElementById("syllabusList").innerHTML += item;
+          } else if (r.resource_type === "Study Materials" || r.resource_type === "Notes") {
+            document.getElementById("materialsList").innerHTML += item;
+          } else {
+            document.getElementById("noticesList").innerHTML += item;
+          }
+        });
+      })
+      .catch(err => console.error("Resource fetch failed:", err));
+  </script>
+
+  <!-- ================= MAIN JS ================= -->
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

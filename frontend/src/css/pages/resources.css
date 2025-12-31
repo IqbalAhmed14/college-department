@@ -1,0 +1,17 @@
+/* resources.css */
+
+.resource-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.resource-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resource-item a {
+  color: var(--primary-color);
+  font-weight: 500;
+}

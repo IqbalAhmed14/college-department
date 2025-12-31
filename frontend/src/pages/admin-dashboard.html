@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard | IT Department</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="nav-logo">Admin Panel</div>
+      <div class="nav-links">
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="admin-add-faculty.html">Add Faculty</a>
+        <a href="admin-add-resource.html">Add Resource</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1>Welcome, Admin</h1>
+      <p>Use this panel to manage faculty and academic resources.</p>
+
+      <div class="stats" style="margin-top: 32px;">
+
+        <!-- FACULTY -->
+        <a href="admin-manage-faculty.html" class="card stat-box link-card">
+          <h3>Faculty</h3>
+          <p>Add / Update Faculty Profiles</p>
+        </a>
+
+        <!-- RESOURCES -->
+        <a href="admin-add-resource.html" class="card stat-box link-card">
+          <h3>Resources</h3>
+          <p>Upload Syllabus & Study Materials</p>
+        </a>
+
+        <!-- GALLERY (✅ ADDED) -->
+        <a href="admin-gallery.html" class="card stat-box link-card">
+          <h3>Gallery</h3>
+          <p>Upload & Manage Gallery Images</p>
+        </a>
+
+        <!-- MESSAGES -->
+        <a href="admin-messages.html" class="card stat-box link-card">
+          <h3>Messages</h3>
+          <p>View Contact Messages</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTH GUARD -->
+  <script type="module" src="../js/admin/auth-guard.js"></script>
+
+  <!-- LOGOUT -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("adminToken");
+      window.location.href = "admin-login.html";
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

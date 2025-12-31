@@ -1,0 +1,27 @@
+/* profile.css */
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.profile-header img {
+  border-radius: var(--radius-lg);
+}
+
+.profile-details h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.profile-section {
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  .profile-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

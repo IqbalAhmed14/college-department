@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Faculty | Admin</title>
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <style>
+    /* UI-only enhancements */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .page-header h2 {
+      margin: 0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #f5f7fb;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    th {
+      font-weight: 600;
+      color: #333;
+    }
+
+    tr:not(:last-child) td {
+      border-bottom: 1px solid #eee;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-action {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-edit {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-edit:hover {
+      background: #1e4fd8;
+    }
+
+    .btn-delete {
+      background: #dc2626;
+      color: #fff;
+    }
+
+    .btn-delete:hover {
+      background: #b91c1c;
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="nav-logo">Admin Panel</div>
+    <div class="nav-links">
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="admin-add-faculty.html">Add Faculty</a>
+      <a href="admin-manage-faculty.html" class="active">Manage Faculty</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <div class="page-header">
+      <h2>Manage Faculty</h2>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Email</th>
+            <th style="width: 160px;">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="facultyTable">
+          <!-- populated by faculty-admin.js -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUTH -->
+<script type="module" src="../js/admin/auth-guard.js"></script>
+
+<!-- LOGIC -->
+<script type="module" src="../js/admin/faculty-admin.js"></script>
+
+</body>
+</html>

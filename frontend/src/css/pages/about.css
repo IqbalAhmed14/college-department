@@ -1,0 +1,21 @@
+/* about.css */
+
+.about-section {
+  background-color: var(--bg-light);
+}
+
+.about-section h2 {
+  margin-bottom: var(--space-md);
+}
+
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .vision-mission {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,41 @@
+/* variables.css */
+/* Global Design Tokens */
+
+:root {
+  /* 🎨 Colors */
+  --primary-color: #0d47a1;
+  --secondary-color: #1976d2;
+  --accent-color: #00c853;
+
+  --bg-light: #f9fbfd;
+  --bg-dark: #0b1320;
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-light: #ffffff;
+
+  /* 🧱 Layout */
+  --container-width: 1200px;
+  --section-padding: 80px;
+
+  /* 🧩 Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+
+  /* 🔲 Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* 🌫 Shadows */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  /* ⚡ Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+}

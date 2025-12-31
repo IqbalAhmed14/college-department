@@ -1,0 +1,22 @@
+/* gallery.css */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.gallery-grid img {
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-normal);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

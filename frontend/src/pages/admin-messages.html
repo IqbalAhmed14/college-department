@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Messages | IT Department</title>
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <style>
+    .messages-wrapper {
+      margin-top: 24px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .message-card {
+      padding: 20px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      display: grid;
+      gap: 10px;
+    }
+
+    .message-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .message-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .message-email {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .message-date {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .message-body {
+      background: #f9fafb;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="nav-logo">Admin Panel</div>
+      <div class="nav-links">
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="admin-add-faculty.html">Add Faculty</a>
+        <a href="admin-add-resource.html">Add Resource</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <div class="container">
+      <h1>Contact Messages</h1>
+      <p>Messages submitted from the website contact form.</p>
+
+      <div id="messagesContainer" class="messages-wrapper">
+        <div class="card">Loading messages...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTH GUARD -->
+  <script type="module" src="../js/admin/auth-guard.js"></script>
+
+  <!-- MESSAGES JS -->
+  <script type="module" src="../js/admin/messages-admin.js"></script>
+
+  <!-- LOGOUT -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("adminToken");
+      window.location.href = "admin-login.html";
+    });
+  </script>
+
+</body>
+</html>
+    

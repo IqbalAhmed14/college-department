@@ -1,0 +1,26 @@
+/* contact.css */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  width: fit-content;
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

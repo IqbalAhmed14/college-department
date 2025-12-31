@@ -1,0 +1,25 @@
+/* faculty.css */
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.faculty-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.faculty-filter input {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 900px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}
