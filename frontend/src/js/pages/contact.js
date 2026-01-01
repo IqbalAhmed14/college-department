@@ -1,7 +1,8 @@
 /* contact.js */
 /* Contact Form Integration */
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://college-department-backend.onrender.com/api";
+
 
 export function initContact() {
   console.log("Contact page initialized");
