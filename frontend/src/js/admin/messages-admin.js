@@ -1,4 +1,4 @@
-const API_URL = "https://college-department-backend.onrender.com/api/admin/messages";
+const API_URL = "http://localhost:5000/api/admin/messages";
 
 const container = document.getElementById("messagesContainer");
 
