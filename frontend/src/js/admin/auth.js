@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/admin/login";
+const API_URL = "https://college-department-backend.onrender.com/api/admin/login";
+
 
 document.getElementById("adminLoginForm").addEventListener("submit", async (e) => {
   e.preventDefault();

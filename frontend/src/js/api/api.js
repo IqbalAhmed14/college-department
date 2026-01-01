@@ -1,7 +1,7 @@
 /* api.js */
 /* Central API Helper */
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://college-department-backend.onrender.com/api";
 
 /**
  * Generic GET request

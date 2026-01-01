@@ -1,8 +1,8 @@
 /* resources.js */
 /* Resources Page Logic + Backend Integration (FIXED) */
 
-const API_BASE_URL = "http://localhost:5000/api";
-const FILE_BASE_URL = "http://localhost:5000"; // 🔥 IMPORTANT FIX
+const API_BASE_URL = "https://college-department-backend.onrender.com/api";
+const FILE_BASE_URL = "https://college-department-backend.onrender.com"; // 🔥 IMPORTANT FIX
 
 export function initResources() {
   console.log("Resources page initialized");
