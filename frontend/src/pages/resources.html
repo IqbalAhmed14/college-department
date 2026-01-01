@@ -166,14 +166,14 @@
 
   <!-- ================= RESOURCE DATA SCRIPT (ADDED ONLY) ================= -->
   <script>
-    fetch("https://college-department-backend.onrender.com/api/resources")
+    fetch("http://localhost:5000/api/resources")
       .then(res => res.json())
       .then(resources => {
         resources.forEach(r => {
           const item = `
             <div class="card">
               <p><strong>${r.title}</strong></p>
-              <a href="https://college-department-backend.onrender.com${r.file_url}" target="_blank">
+              <a href="http://localhost:5000${r.file_url}" target="_blank">
                 View / Download
               </a>
             </div>

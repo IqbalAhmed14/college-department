@@ -1,5 +1,5 @@
 // gallery-admin.js
-const API_URL = "https://college-department-backend.onrender.com/api/gallery";
+const API_URL = "http://localhost:5000/api/gallery";
 
 const token = localStorage.getItem("adminToken");
 
@@ -37,7 +37,7 @@ async function loadGallery() {
 
       card.innerHTML = `
         <img 
-          src="https://college-department-backend.onrender.com${item.image_url}"
+          src="http://localhost:5000${item.image_url}"
           style="width:100%;max-height:200px;object-fit:cover;border-radius:8px"
         />
         <h4 style="margin-top:12px">${item.title}</h4>

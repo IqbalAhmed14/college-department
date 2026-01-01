@@ -1,7 +1,7 @@
 /* home.js */
 /* Home Page Logic + Backend Integration */
 
-const API_BASE_URL = "https://college-department-backend.onrender.com/api";
+const API_BASE_URL = "http://localhost:5000/api";
 
 export function initHome() {
   console.log("Home page initialized");

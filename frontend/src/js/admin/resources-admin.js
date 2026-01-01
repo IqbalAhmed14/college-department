@@ -2,8 +2,8 @@
 // Resource Admin JS (FINAL – FIXED VIEW ISSUE)
 // ===============================
 
-const API = "https://college-department-backend.onrender.com/api/resources";
-const BACKEND = "https://college-department-backend.onrender.com";
+const API = "http://localhost:5000/api/resources";
+const BACKEND = "http://localhost:5000";
 
 const form = document.getElementById("resourceForm");
 const list = document.getElementById("resourceList");

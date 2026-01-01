@@ -1,4 +1,4 @@
-const API_URL = "https://college-department-backend.onrender.com/api/faculty";
+const API_URL = "http://localhost:5000/api/faculty";
 
 const token = localStorage.getItem("adminToken");
 
